@@ -97,7 +97,7 @@ cache-warmup-dev:
 install: ## Install Helpdesk
 install: vendor start
 	@echo "\${YELLOW}- Installing Helpdesk\${NC}"
-	$(CONSOLE) oro:install \
+	$(CONSOLE) diamante:install \
 		--application-url=$(OROCOMMERCE_APPLICATION_URL) \
 		--organization-name=$(OROCOMMERCE_ORGANIZATION_NAME) \
 		--user-name=$(OROCOMMERCE_ADMIN_USERNAME) \
@@ -121,7 +121,7 @@ uninstall: start
 reinstall: ## Reinstall Helpdesk
 reinstall: vendor uninstall start
 	@echo "\${YELLOW}- Reinstalling Helpdesk\${NC}"
-	$(CONSOLE) oro:install \
+	$(CONSOLE) diamante:install \
 		--application-url=$(OROCOMMERCE_APPLICATION_URL) \
 		--organization-name=$(OROCOMMERCE_ORGANIZATION_NAME) \
 		--user-name=$(OROCOMMERCE_ADMIN_USERNAME) \
