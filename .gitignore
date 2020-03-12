@@ -40,8 +40,10 @@ behat.yml
 bin/*
 !bin/console
 !bin/dist
+!bin/uninstall
 phpunit.xml
 /var/SymfonyRequirements.php
 /public/uploads/behat
 /.web-server-pid
 /.vagrant
+/.env

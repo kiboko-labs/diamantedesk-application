@@ -1,15 +1,15 @@
 parameters:
-    database_driver:        pdo_mysql
-    database_host:          127.0.0.1
+    database_driver:        pdo_pgsql
+    database_host:          sql
     database_port:          ~
-    database_name:          diamantedesk
-    database_user:          root
-    database_password:      ~
+    database_name:          kiboko
+    database_user:          kiboko
+    database_password:      password
     database_driver_options: []
 
-    mailer_transport:       mail
-    mailer_host:            127.0.0.1
-    mailer_port:            ~
+    mailer_transport:       smtp
+    mailer_host:            mail
+    mailer_port:            1025
     mailer_encryption:      ~
     mailer_user:            ~
     mailer_password:        ~

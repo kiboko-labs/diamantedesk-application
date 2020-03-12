@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Yaml\Yaml;
+
+require 'vendor/autoload.php';
+$data = Yaml::parseFile('config/parameters.yml');
+$data['parameters']['installed'] = null;
+file_put_contents('config/parameters.yml', Yaml::dump($data));
+
