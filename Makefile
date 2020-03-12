@@ -94,9 +94,9 @@ cache-warmup-dev:
 	$(CONSOLE-DEV) cache:warmup
 
 .PHONY: install
-install: ## Install OroCommerce
+install: ## Install Helpdesk
 install: vendor start
-	@echo "\${YELLOW}- Installing OroCommerce\${NC}"
+	@echo "\${YELLOW}- Installing Helpdesk\${NC}"
 	$(CONSOLE) oro:install \
 		--application-url=$(OROCOMMERCE_APPLICATION_URL) \
 		--organization-name=$(OROCOMMERCE_ORGANIZATION_NAME) \
@@ -111,16 +111,16 @@ install: vendor start
 		--timeout=0
 
 .PHONY: uninstall
-uninstall: ## Uninstall OroCommerce
+uninstall: ## Uninstall Helpdesk
 uninstall: start
-	@echo "\${YELLOW}- Uninstalling OroCommercd\${NC}"
+	@echo "\${YELLOW}- Uninstalling Helpdesk\${NC}"
 	$(SH) -c "rm -rf var/cache/*"
 	$(SH) -c "bin/uninstall"
 
 .PHONY: reinstall
-reinstall: ## Reinstall OroCommerce
+reinstall: ## Reinstall Helpdesk
 reinstall: vendor uninstall start
-	@echo "\${YELLOW}- Reinstalling OroCommercd\${NC}"
+	@echo "\${YELLOW}- Reinstalling Helpdesk\${NC}"
 	$(CONSOLE) oro:install \
 		--application-url=$(OROCOMMERCE_APPLICATION_URL) \
 		--organization-name=$(OROCOMMERCE_ORGANIZATION_NAME) \
